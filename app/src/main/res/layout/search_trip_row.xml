@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:descendantFocusability="blocksDescendants">
+
+    <wahCustomViews.view.WahImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/search_trip_image"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop"
+        app:img_corner_radius="3dp"
+        app:error_img="@drawable/trip_placeholder"/>
+
+    <ImageView
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/round_corner_image_mask" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TextView
+            android:id="@+id/search_trip_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif"
+            android:gravity="center_vertical|left"
+            android:singleLine="true"
+            android:text="Trip to NYC"
+            android:textColor="@color/white"
+            android:textSize="24dp" />
+
+        <LinearLayout
+            android:id="@+id/location_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/search_trip_name"
+            android:orientation="vertical">
+
+            <com.weareholidays.bia.widgets.ExpandableHeightGridView
+                android:id="@+id/location_gridview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:horizontalSpacing="10dp"
+                android:numColumns="3"
+                android:verticalSpacing="2dp" />
+
+            <TextView
+                android:id="@+id/moretext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="3dp"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            android:paddingBottom="10dp">
+
+            <wahCustomViews.view.WahImageView
+                android:id="@+id/trip_user_image"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center"
+                app:error_img="@drawable/user_placeholder"
+                app:is_circular="true"
+                app:img_border_color="@color/white"
+                app:img_border_width="1dp" />
+
+            <LinearLayout
+                android:id="@+id/on_going"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ongoing" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:text="ONGOING"
+                    android:textColor="@android:color/white"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/search_trip_days"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="3 Days"
+                android:textColor="@color/white"
+                android:textSize="12dp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/search_trip_date"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="29 Mar, 2015"
+                android:textColor="@color/white"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

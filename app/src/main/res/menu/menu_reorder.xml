@@ -1,0 +1,9 @@
+<menu xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.weareholidays.bia.activities.journal.timeline.ReorderActivity">
+    <!--<item-->
+        <!--android:id="@+id/user_info"-->
+        <!--android:title="DONE"-->
+        <!--android:actionLayout="@layout/reorder_toolbar"-->
+        <!--android:icon="@drawable/tick"-->
+        <!--app:showAsAction="always|withText" />-->
+</menu>

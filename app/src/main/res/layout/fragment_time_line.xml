@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f2f2f2"></View>
+    <LinearLayout
+        android:id="@+id/line"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="@color/timeline_color"
+        android:visibility="gone"
+        android:layout_marginLeft="35dp"
+        android:orientation="vertical"></LinearLayout>
+
+    <android.support.v7.widget.RecyclerView xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="80dp"
+        android:focusableInTouchMode="true"
+        android:animateLayoutChanges="false"
+        tools:context="com.weareholidays.bia.activities.journal.timeline.TimeLineFragment"></android.support.v7.widget.RecyclerView>
+
+    <TextView
+        android:id="@+id/empty_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|center_vertical"
+        android:visibility="gone"
+        android:text="No Posts to Show!"
+        android:paddingTop="15px"
+        android:paddingLeft="10px"
+        android:textColor="@color/search_hint_color"
+        android:textSize="15dp"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/overlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </FrameLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@drawable/toolbar_dropshadow" />
+</RelativeLayout>

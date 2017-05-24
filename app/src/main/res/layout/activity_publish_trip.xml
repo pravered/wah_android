@@ -1,0 +1,205 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CED1D3"
+    tools:context="com.weareholidays.bia.activities.journal.trip.PublishTripActivity">
+
+    <include layout="@layout/toolbar" />
+
+    <FrameLayout
+        android:id="@+id/top"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp">
+
+        <wahCustomViews.view.WahImageView
+            android:id="@+id/picture_holder"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/trip_placeholder"
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/trip_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Trip to Test"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <wahCustomViews.view.WahImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/trip_user_image"
+                    android:layout_width="20sp"
+                    android:layout_height="20sp"
+                    android:gravity="center_vertical"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/user_placeholder"
+                    app:img_border_color="@color/white"
+                    app:img_border_width="1dp"
+                    app:is_circular="true" />
+
+                <TextView
+                    android:id="@+id/trip_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20sp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/trip_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20sp"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginLeft="10dp"
+            android:text="SHARE TRIP ON"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/permissions_facebook" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/facebook"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical|start"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/fb_share"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/checkbox_fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+        </LinearLayout>
+
+        <!--<View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="60dp"
+            android:background="@color/separator" />
+
+        <LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="50dp"-->
+        <!--android:background="@drawable/twitter_permission"-->
+        <!--android:layout_marginTop="20dp"-->
+        <!--android:layout_marginBottom="20dp"-->
+        <!--android:layout_gravity="center" />-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_weight="1"-->
+        <!--android:layout_gravity="center">-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/twitter"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:layout_gravity="center_vertical|start"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:textAppearance="?android:attr/textAppearanceMedium"/>-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="@string/fb_share"-->
+        <!--android:layout_gravity="center_vertical|start"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:textAppearance="?android:attr/textAppearanceSmall"/>-->
+
+        <!--</LinearLayout>-->
+
+        <!--<CheckBox android:id="@+id/checkbox_twitter"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center" />-->
+
+        <!--</LinearLayout>-->
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/publish_trip_btn"
+        style="@style/PrimaryButton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_orange"
+        android:text="Publish"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

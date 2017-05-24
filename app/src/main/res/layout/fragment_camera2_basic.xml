@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_control"
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:background="#272627"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true">
+        
+        <ImageView
+            android:layout_width="18dp"
+            android:id="@+id/close_btn"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="28dp"
+            android:src="@drawable/floatingbutton_cross"
+            android:layout_height="18dp" />
+
+        <ImageView
+            android:layout_width="60dp"
+            android:id="@+id/picture"
+            android:layout_centerInParent="true"
+            android:src="@drawable/addphoto_clickbutton"
+            android:scaleType="fitCenter"
+            android:layout_height="60dp" />
+
+    </RelativeLayout>
+
+    <com.weareholidays.bia.activities.journal.photo.camera.AutoFitTextureView
+        android:id="@+id/texture"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/bottom_control"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@android:color/transparent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:layout_width="match_parent"
+            android:background="#B34A4A4A"
+            android:layout_height="80dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/toggle_camera_facing"
+            android:id="@+id/change_camera"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="17dp"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/flash"
+            android:paddingRight="13dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

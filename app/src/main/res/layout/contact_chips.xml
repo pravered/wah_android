@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/chips_contacts_bg">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/contact_image"
+        app:border_width="1dp"
+        app:border_color="@color/app_orange"
+        android:layout_gravity="center"
+        android:background="@drawable/user_placeholder"/>
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/edtTxt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:shadowColor="#FFFFFF"
+        android:shadowDy="1"
+        android:shadowRadius="0.01"
+        android:textColor="@color/app_orange"
+        android:textSize="16sp"
+        android:layout_gravity="center_vertical"
+        fontPath="fonts/roboto/Roboto-Bold.ttf" />
+
+</LinearLayout>

@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.weareholidays.bia.activities.journal.trip.TripStartActivity">
+
+    <item android:id="@+id/upload_image"
+        android:title="@string/upload_timeline_wallpaper"
+        android:icon="@drawable/createjournal_photo"
+        app:showAsAction="always"/>
+
+</menu>

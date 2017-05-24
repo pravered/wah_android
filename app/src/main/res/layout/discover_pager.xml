@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <wahCustomViews.view.WahImageView
+        android:id="@+id/trip_image"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/black"
+        android:scaleType="centerCrop" />
+
+    <ImageView
+        android:id="@+id/mask"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:background="#8000" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:padding="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:id="@+id/featured"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif"
+            android:gravity="left"
+            android:text="FEATURED"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/trip_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/featured"
+            android:fontFamily="sans-serif"
+            android:gravity="left"
+            android:text="Trip to NYC"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/trip_name"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+            <wahCustomViews.view.WahImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/trip_user_image"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:gravity="center_vertical"
+                android:src="@drawable/user_placeholder"
+                app:is_circular="true"
+                app:img_border_color="@color/white"
+                app:img_border_width="1dp" />
+
+            <TextView
+                android:id="@+id/trip_days"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="3 Days"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/trip_date"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center_vertical"
+                android:text="29 Mar, 2015"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>

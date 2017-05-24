@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.weareholidays.bia.activities.account.InviteFriends">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="@dimen/screen_padding">
+
+        <TextView
+            android:id="@+id/invite_friends_title"
+            fontPath="fonts/roboto/Roboto-Bold.ttf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/screen_padding_plus_half"
+            android:text="@string/activity_invite_friends_title"
+            android:textStyle="bold"
+            android:textSize="@dimen/text_size_20" />
+
+        <TextView
+            android:id="@+id/invite_friends_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/invite_friends_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/screen_padding_double"
+            android:gravity="center"
+            android:text="@string/activity_invite_friends_desc"
+            android:textSize="@dimen/text_size_14" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/invite_friends_desc"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/screen_padding_tetra"
+            android:src="@drawable/invitefriends_graphics" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/text_size_14"
+                android:text="@string/activity_invite_friends_share" />
+
+            <Button
+                android:id="@+id/invite_friends_btn"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/screen_padding"
+                android:layout_marginTop="@dimen/screen_padding"
+                android:background="@color/app_orange"
+                android:text="@string/activity_invite_friends_button_text"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/invite_friend_detail_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/app_sky_blue"
+                android:text="@string/activity_invite_friends_details" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

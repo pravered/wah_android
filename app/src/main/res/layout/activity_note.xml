@@ -1,0 +1,112 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEF1F3"
+    tools:context="com.weareholidays.bia.activities.journal.actions.NoteActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/note_scroll"
+        android:layout_below="@+id/toolbar"
+        android:layout_above="@+id/bottom_layout">
+
+        <LinearLayout
+            android:id="@+id/parent_upper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <EditText
+                    android:id="@+id/noteText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activity_vertical_margin"
+                    android:hint="@string/type_here"
+                    android:maxLength="300"
+                    android:scrollbars="vertical"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/max_length"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/noteText"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="right"
+                        android:text="@string/max_length"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="#CCCFD1"
+                        android:textSize="10dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_layout"
+        android:layout_alignParentBottom="true"
+        android:background="#E5E9EB"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:padding="5dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/location_small" />
+
+            <EditText
+                android:id="@+id/atv_places"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="#00000000"
+                android:fontFamily="Roboto"
+                android:hint="Where are you ?"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:focusable="false"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/red_button"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+</RelativeLayout>
+

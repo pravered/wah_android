@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--android:id="@+id/toolbar"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:minHeight="?attr/actionBarSize"-->
+    <!--android:background="?attr/colorPrimary"-->
+    <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+    <!--app:popupTheme="@style/ThemeOverlay.WAH">-->
+
+<android.support.design.widget.TabLayout
+    android:layout_width="fill_parent"
+    android:id="@+id/tabs"
+    android:background="@color/orange_primary"
+    app:tabIndicatorColor="@color/white"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" />
+
+<!--</android.support.v7.widget.Toolbar>-->

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="google_maps_android_key">AIzaSyCu95wmNUJOpoaquMgKzxeGbRDemI3KNqU</string>
+    <string name="google_maps_server_key">AIzaSyD_BdoNnf5-3Mwp9MhKY4b9wsZdOUjv2mI</string>
+    <string name="parse_app_id"></string>
+    <string name="parse_client_key"></string>
+    <!--<string name="facebook_app_id">666846350116637</string>-->
+    <string name="facebook_app_id">1834324633483940</string>
+    <!--<string name="twitter_consumer_key">HZbQGuaIJY6e4HF1M9ifIts5x</string>-->
+    <!--<string name="twitter_consumer_secret">AW3zC1xsTC6Aew5utgF6CieMG9us32Iyx5U6wNfXCBJgTuj8um</string>-->
+    <string name="twitter_consumer_key">ZGGmHHbp4pI3pRdU9urjl8C9M</string>
+    <string name="twitter_consumer_secret">HKuSlPI79h2cXRGWXDD13XEEAzZLzciRV0vno2X3R6osZ0WPxF</string>
+    <string name="google_analytics_tracker_id"></string>
+    <string name="localytics_app_key"></string>
+    <string name="crittercism_app_key">5908a4face63454082807f4d9f4dad2000555300</string>
+</resources>

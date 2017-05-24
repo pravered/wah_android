@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="FloatLabelLayout">
+        <attr name="floatLabelTextAppearance" format="reference" />
+        <attr name="floatLabelText" format="string" />
+        <attr name="floatLabelTextFocusedColor" format="color" />
+        <attr name="floatLabelTrigger" format="enum">
+            <enum name="text" value="0" />
+            <enum name="focus" value="1" />
+        </attr>
+        <attr name="floatLabelSidePadding" format="reference|dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="WahImageView">
+        <attr name="img_corner_radius" format="dimension" />
+        <attr name="img_border_width" format="dimension" />
+        <attr name="img_border_color" format="color" />
+        <attr name="is_circular" format="boolean" />
+        <attr name="placeholder_img" format="reference"/>
+        <attr name="error_img" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="ShowcaseView">
+        <attr name="sv_backgroundColor" format="color|reference" />
+        <attr name="sv_detailTextColor" format="color|reference" />
+        <attr name="sv_titleTextColor" format="color|reference" />
+        <attr name="sv_buttonBackgroundColor" format="color|reference" />
+        <attr name="sv_buttonForegroundColor" format="color|reference" />
+        <attr name="sv_buttonText" format="string|reference" />
+        <attr name="sv_detailTextAppearance" format="reference" />
+        <attr name="sv_titleTextAppearance" format="reference" />
+        <attr name="sv_showcaseColor" format="color|reference" />
+        <attr name="sv_tintButtonColor" format="boolean|reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomTheme">
+        <attr name="showcaseViewStyle" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CircularProgressBar">
+        <attr name="cpb_hasShadow" format="boolean"/>
+        <attr name="cpb_progressColor" format="string"/>
+        <attr name="cpb_backgroundColor" format="string"/>
+        <attr name="cpb_title" format="string"/>
+        <attr name="cpb_titleColor" format="string"/>
+        <attr name="cpb_subtitle" format="string"/>
+        <attr name="cpb_subtitleColor" format="string"/>
+        <attr name="cpb_strokeWidth" format="integer"/>
+    </declare-styleable>
+</resources>

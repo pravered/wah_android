@@ -1,0 +1,14 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="center_horizontal|top">
+
+    <EditText
+        android:id="@+id/coupon"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_dialog_edit_field"
+        android:padding="@dimen/screen_padding"
+        android:singleLine="true"
+        android:textCursorDrawable="@null" />
+</RelativeLayout>

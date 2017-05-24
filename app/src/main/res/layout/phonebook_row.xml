@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:background="#f2f2f2"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout android:id="@+id/row"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <FrameLayout
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center">
+
+            <wahCustomViews.view.WahImageView
+                android:id="@+id/contact_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/user_placeholder"
+                android:scaleType="centerCrop"
+                app:is_circular="true"/>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end">
+
+                <ImageView
+                    android:id="@+id/contact_type_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/addpeople_phonebook" />
+
+                <ImageView
+                    android:id="@+id/contact_type_fb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/addpeople_facebook"
+                    android:visibility="gone"/>
+
+                <ImageView
+                    android:id="@+id/contact_type_twitter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/addpeople_twitter"
+                    android:visibility="gone"/>
+
+            </FrameLayout>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/contact_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|start"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:textSize="18sp"
+            android:textColor="#4a4a4a"
+            android:layout_weight="1"/>
+
+        <CheckBox android:id="@+id/checkbox_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:theme="@style/CheckBox_Theme"/>
+        <!-- Useful link for checkbox styling (kapil) -->
+        <!-- http://stackoverflow.com/questions/10135499/android-checkbox-style -->
+
+    </LinearLayout>
+
+    <View
+        android:layout_below="@+id/row"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_marginLeft="60dp"
+    android:background="#d8d8d8" />
+
+</RelativeLayout>

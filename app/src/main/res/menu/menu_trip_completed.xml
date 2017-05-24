@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/action_share_journal" android:title="@string/action_share_journal"
+        android:icon="@drawable/photo_edit_tag"
+        app:showAsAction="always" />
+
+    <item android:id="@+id/action_change_trip_feature_image" android:title="@string/action_trip_change_photo"
+        app:showAsAction="never" />
+
+    <!--<item android:id="@+id/action_change_trip_feature_remove_image" android:title="@string/action_trip_remove_photo"-->
+        <!--app:showAsAction="never" />-->
+
+    <item android:id="@+id/action_delete_posts" android:title="@string/action_edit_posts"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_reorder_posts" android:title="@string/action_reorder_posts"
+        android:visible="false"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_edit_people" android:title="@string/action_edit_people"
+        app:showAsAction="never" />
+
+    <item android:id="@+id/action_delete_journal" android:title="@string/action_delete_journal"
+        app:showAsAction="never" />
+
+</menu>

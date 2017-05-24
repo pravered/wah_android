@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    app:theme="@style/Theme.Transparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/trip_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:theme="@style/Theme.Transparent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout="@layout/reorder_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:theme="@style/WAH_Theme.TripTimeLine"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <android.support.design.widget.TabLayout
+                android:layout_width="match_parent"
+                android:id="@+id/trip_tabs"
+                app:tabSelectedTextColor="@color/white"
+                app:tabTextColor="@color/trip_timeline_tab_text_color"
+                app:tabIndicatorColor="@color/white"
+                android:layout_height="match_parent"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/trip_pager"
+        android:layout_below="@id/trip_app_bar"
+        android:layout_width="fill_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="fill_parent"/>
+
+</android.support.design.widget.CoordinatorLayout>

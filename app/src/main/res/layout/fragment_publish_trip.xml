@@ -1,0 +1,94 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/finish_trip_fragment_background"
+    android:visibility="gone">
+
+    <RelativeLayout
+        android:id="@+id/publish_trip_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/screen_padding_double">
+
+        <ImageView
+            android:id="@+id/img_upload_success"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/screen_padding"
+            android:src="@drawable/finish_checkmark" />
+
+        <TextView
+            android:id="@+id/publish_trip_success_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_upload_success"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/screen_padding_plus_half"
+            android:text="@string/publish_trip_success_msg"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/publish_trip_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/publish_trip_success_msg"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/screen_padding_double_plus_half"
+            android:text="@string/publish_trip_title"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/img_publish_trip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/publish_trip_title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/screen_padding_double"
+            android:src="@drawable/publishtrip_graphics" />
+
+        <LinearLayout
+            android:id="@+id/fb_share_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_publish_trip"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/screen_padding_triple"
+            android:gravity="center">
+
+            <CheckBox
+                android:id="@+id/checkbox_fb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/publish_trip_share_fb"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/publish_trip_btn"
+            style="@style/PrimaryButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fb_share_layout"
+            android:layout_marginTop="@dimen/screen_padding_plus_half"
+            android:background="@color/app_orange"
+            android:text="@string/publish_trip"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/skip_publish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/publish_trip_btn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/screen_padding_plus_half"
+            android:text="@string/finish_trip_skip"
+            android:textColor="@color/app_sky_blue"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+</ScrollView>

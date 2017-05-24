@@ -1,0 +1,682 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.weareholidays.bia.activities.journal.timeline.TripSummaryFragment">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/trip_summary_location_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/timeline_padding_left_right">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/tripsummary_calendar" />
+
+                        <TextView
+                            android:id="@+id/tv_trip_duration"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="12dp"
+                            android:layout_marginLeft="11dp"
+                            android:layout_marginTop="12dp"
+                            android:textColor="@color/trip_summary_card_heading_color"
+                            android:textSize="13sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="@color/separator" />
+
+                    <com.weareholidays.bia.widgets.ExpandableHeightGridView xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/location_gridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginRight="12dp"
+                        android:horizontalSpacing="10dp"
+                        android:numColumns="3"
+                        android:verticalSpacing="2dp" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/timeline_padding_left_right">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/trip_overview"
+                        android:textColor="@color/trip_summary_card_heading_color"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/distance_block"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="@dimen/timeline_padding_left_right_half"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="@color/distance_blue_primary">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="horizontal"
+                                android:padding="15dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="2"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/summary_distance"
+                                            fontPath="fonts/bebasNeue/BebasNeue-Regular.ttf"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="bottom"
+                                            android:text=""
+                                            android:textColor="@color/white"
+                                            android:textSize="48sp" />
+
+                                        <TextView
+                                            android:id="@+id/summary_distance_unit"
+                                            fontPath="fonts/bebasNeue/BebasNeue-Bold.ttf"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="bottom"
+                                            android:layout_marginLeft="5dp"
+                                            android:text="KM"
+                                            android:textColor="@color/white"
+                                            android:textSize="24sp" />
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        fontPath="fonts/roboto/Roboto-Bold.ttf"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:text="@string/summary_distance"
+                                        android:textColor="@color/summary_distance_color" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="40sp"
+                                        android:layout_height="40sp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/trip_overview_distance" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/duration_block"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="@dimen/timeline_padding_left_right_half"
+                            android:layout_weight="1"
+                            android:padding="15dp"
+                            app:cardBackgroundColor="@color/day_orange">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="horizontal"
+                                android:padding="15dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="2"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="0dp"
+                                        android:layout_weight="1"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/summary_duration"
+                                            fontPath="fonts/bebasNeue/BebasNeue-Regular.ttf"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="bottom"
+                                            android:text="1"
+                                            android:textColor="@color/white"
+                                            android:textSize="48sp" />
+
+                                        <TextView
+                                            android:id="@+id/summary_duration_unit"
+                                            fontPath="fonts/bebasNeue/BebasNeue-Bold.ttf"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="bottom"
+                                            android:layout_marginLeft="5dp"
+                                            android:text="DAY"
+                                            android:textColor="@color/white"
+                                            android:textSize="24sp" />
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        fontPath="fonts/roboto/Roboto-Bold.ttf"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:text="@string/summary_duration"
+                                        android:textColor="@color/summary_duration_color" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="40sp"
+                                        android:layout_height="40sp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/trip_overview_duration" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/timeline_padding_left_right"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/check_in_block"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="@dimen/timeline_padding_left_right_half"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="@color/orange_primary">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="horizontal"
+                                android:padding="15dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="2"
+                                    android:orientation="vertical">
+
+
+                                    <TextView
+                                        android:id="@+id/summary_check_ins"
+                                        fontPath="fonts/bebasNeue/BebasNeue-Regular.ttf"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="48sp" />
+
+                                    <TextView
+                                        fontPath="fonts/roboto/Roboto-Bold.ttf"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/summary_check_in"
+                                        android:textColor="@color/summary_check_in_color" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="40sp"
+                                        android:layout_height="40sp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/trip_overview_checkins" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/photo_block"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="@dimen/timeline_padding_left_right_half"
+                            android:layout_weight="1"
+                            android:padding="15dp"
+                            app:cardBackgroundColor="@color/photo_blue_primary">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="horizontal"
+                                android:padding="15dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="2"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/summary_photos"
+                                        fontPath="fonts/bebasNeue/BebasNeue-Regular.ttf"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="48sp" />
+
+                                    <TextView
+                                        fontPath="fonts/roboto/Roboto-Bold.ttf"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/summary_photos"
+                                        android:textColor="@color/summary_photo_color" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="40sp"
+                                        android:layout_height="40sp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/trip_overview_photos" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardBackgroundColor="@color/white">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/timeline_padding_left_right">
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="12dp"
+                        android:layout_marginLeft="11dp"
+                        android:layout_marginTop="12dp"
+                        android:text="@string/social_overview"
+                        android:textColor="@color/trip_summary_card_heading_color"
+                        android:textSize="16sp" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/fb_block"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="3dp"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="@color/facebook_blue_primary">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="horizontal"
+                                android:padding="15dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="2"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/summary_fb"
+                                        fontPath="fonts/bebasNeue/BebasNeue-Regular.ttf"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="48sp" />
+
+                                    <TextView
+                                        fontPath="fonts/roboto/Roboto-Bold.ttf"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:text="@string/summary_fb"
+                                        android:textColor="@color/summary_fb_color" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="40sp"
+                                        android:layout_height="40sp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/social_overview_facebook" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/twitter_block"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="@dimen/timeline_padding_left_right_half"
+                            android:layout_weight="1"
+                            android:padding="15dp"
+                            app:cardBackgroundColor="@color/twitter_blue_primary">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="horizontal"
+                                android:padding="15dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="2"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/summary_twitter"
+                                        fontPath="fonts/bebasNeue/BebasNeue-Regular.ttf"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="48sp" />
+
+
+                                    <TextView
+                                        fontPath="fonts/roboto/Roboto-Bold.ttf"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="left"
+                                        android:text="@string/summary_twitter"
+                                        android:textColor="@color/summary_twitter_color" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="40sp"
+                                        android:layout_height="40sp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/social_overview_twitter" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/timeline_padding_left_right"
+                        android:orientation="horizontal">
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/inst_block"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginRight="@dimen/timeline_padding_left_right_half"
+                            android:layout_weight="1"
+                            app:cardBackgroundColor="@color/instagram_blue_primary">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="horizontal"
+                                android:padding="15dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="2"
+                                    android:orientation="vertical">
+
+
+                                    <TextView
+                                        android:id="@+id/summary_instagram"
+                                        fontPath="fonts/bebasNeue/BebasNeue-Regular.ttf"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:text=""
+                                        android:textColor="@color/white"
+                                        android:textSize="48sp" />
+
+                                    <TextView
+                                        fontPath="fonts/roboto/Roboto-Bold.ttf"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/summary_instagram"
+                                        android:textColor="@color/summary_instagram_color" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="40sp"
+                                        android:layout_height="40sp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/social_overview_instagram" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                        <android.support.v7.widget.CardView
+                            android:id="@+id/notes_block"
+                            android:layout_width="0dp"
+                            android:layout_height="fill_parent"
+                            android:layout_marginLeft="@dimen/timeline_padding_left_right_half"
+                            android:layout_weight="1"
+                            android:padding="15dp"
+                            app:cardBackgroundColor="@color/note_pink_primary">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="fill_parent"
+                                android:orientation="horizontal"
+                                android:padding="15dp">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginRight="5dp"
+                                    android:layout_weight="2"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:id="@+id/summary_notes"
+                                        fontPath="fonts/bebasNeue/BebasNeue-Regular.ttf"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_gravity="bottom"
+                                        android:text="1"
+                                        android:textColor="@color/white"
+                                        android:textSize="48sp" />
+
+                                    <TextView
+                                        fontPath="fonts/roboto/Roboto-Bold.ttf"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="@string/summary_notes"
+                                        android:textColor="@color/summary_note_color" />
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="5dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:layout_width="40sp"
+                                        android:layout_height="40sp"
+                                        android:layout_gravity="center"
+                                        android:src="@drawable/social_overview_notes" />
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </android.support.v7.widget.CardView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_below="@id/trip_app_bar"
+        android:background="@drawable/toolbar_dropshadow" />
+
+</RelativeLayout>

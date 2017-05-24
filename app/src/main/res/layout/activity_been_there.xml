@@ -1,0 +1,35 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    tools:context="com.weareholidays.bia.activities.profile.BeenThereActivity">
+
+    <TextView
+        android:id="@+id/no_trips"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="No trips to show"
+        android:layout_centerInParent="true"
+        android:padding="@dimen/activity_horizontal_margin"
+        android:visibility="gone"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <ListView
+    android:id="@+id/trips_list"
+    android:layout_below="@+id/no_trips"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/app_padding"
+    android:paddingBottom="@dimen/app_padding"
+    android:divider="@android:color/transparent"
+    android:dividerHeight="10dp"/>
+</RelativeLayout>

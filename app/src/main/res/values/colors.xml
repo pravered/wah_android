@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#fff</color>
+    <color name="black">#000000</color>
+    <color name="red_button">#ED4454</color>
+    <color name="grey_back">#f2f2f2</color>
+    <color name="separator">#cfcfcf</color>
+    <color name="app_orange">#FE734C</color>
+    <color name="app_blue">#6569B1</color>
+    <color name="app_light_grey">#828282</color>
+    <color name="app_dark_grey">#2D2D2D</color>
+    <color name="app_sky_blue">#41A5CC</color>
+    <color name="app_red">#ED4454</color>
+    <color name="pressed_fab">#808080</color>
+    <color name="text_color_4a">#4a4a4a</color>
+
+    <color name="myColor">#fe734c</color>
+
+    <color name="orange_primary">#fe734c</color>
+    <color name="orange_primary_dark">#c4583b</color>
+    <color name="duration_yellow_primary">#f5a623</color>
+    <color name="duration_yellow_primary_dark">#9c6100</color>
+    <color name="photo_blue_primary">#6569b1</color>
+    <color name="photo_blue_primary_dark">#5a5e9e</color>
+    <color name="note_pink_primary">#ed4454</color>
+    <color name="note_pink_primary_dark">#d63d4c</color>
+    <color name="distance_blue_primary">#3084DF</color>
+    <color name="distance_blue_primary_dark">#175eaa</color>
+    <color name="video_blue_primary">#41a5cc</color>
+    <color name="video_blue_primary_dark">#3b95b8</color>
+    <color name="twitter_blue_primary">#59adeb</color>
+    <color name="twitter_blue_primary_dark">#3890d0</color>
+    <color name="facebook_blue_primary">#3c5a96</color>
+    <color name="facebook_blue_primary_dark">#203770</color>
+    <color name="instagram_blue_primary">#417399</color>
+    <color name="instagram_blue_primary_dark">#417399</color>
+    <color name="float_label_color">#929292</color>
+    <color name="focused_float_label_color">#0099CC</color>
+    <color name="transparent_gray_background">#DFE1E2E0</color>
+    <color name="transparent_black_background">#99000000</color>
+    <color name="facebook">#3b5998</color>
+    <color name="map_title">#CDC5B0</color>
+    <color name="map_background">#F8F1E1</color>
+    <color name="search_tab_bg">#C5C8CB</color>
+
+    <color name="grey_primary">#d8d8d8</color>
+    <color name="trip_timeline_tab_text_color">#BFBFBF</color>
+    <color name="trip_name_color">#546076</color>
+    <color name="grey_shaded_color">#A8B7BF</color>
+    <color name="trip_summary_card_heading_color">#0c1d3c</color>
+    <color name="day_orange">#f5a623</color>
+    <color name="summary_duration_color">#9c6100</color>
+    <color name="summary_distance_color">#003874</color>
+    <color name="summary_check_in_color">#a43b1d</color>
+    <color name="summary_photo_color">#141630</color>
+    <color name="summary_fb_color">#05173a</color>
+    <color name="summary_twitter_color">#1f75d8</color>
+    <color name="summary_instagram_color">#10335b</color>
+    <color name="summary_note_color">#820006</color>
+    <color name="grey_primary_color">#eef1f3</color>
+    <color name="green_primaryr">#489F75</color>
+    <color name="green_primary_dark">#397f5d</color>
+    <color name="orange_accent">#fb7548</color>
+    <color name="view_profile">#757575</color>
+    <color name="place_holder">#9b9b9b</color>
+    <color name="account_name">#212121</color>
+    <color name="underline">#e0e0e0</color>
+    <color name="underline1">#c0c0c0</color>
+    <color name="underline2">#b0b0b0</color>
+    <color name="solid_white">#80FFFFFF</color>
+    <color name="white_disclaimer">#99FFFFFF</color>
+    <color name="add_people">#E5E3E3</color>
+    <color name="map_border">#979797</color>
+    <color name="photo_black_background">#121212</color>
+    <color name="search_hint_color">#B0B0B0</color>
+
+    <color name="swipe_color_1">#fe734c</color>
+    <color name="swipe_color_2">#fe734c</color>
+    <color name="swipe_color_3">#fe734c</color>
+    <color name="swipe_color_4">#fe734c</color>
+    <color name="timeline_border_color">#48979797</color>
+    <color name="timeline_color">#304a4a4a</color>
+
+    <!-- Circular progress bar -->
+    <color name="circular_progress_default_progress">#FE734C</color>
+    <color name="circular_progress_default_background">#00000000</color>
+    <color name="circular_progress_default_title">#828282</color>
+    <color name="circular_progress_default_subtitle">#828282</color>
+
+    <color name="finish_trip_fragment_background">#f8f6f5</color>
+</resources>

@@ -1,0 +1,189 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.weareholidays.bia.activities.login.SignUpEmailActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/continue_btn"
+        android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/activity_vertical_margin">
+
+            <wahCustomViews.view.WahImageView
+                android:id="@+id/image_profile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:src="@drawable/user_placeholder"
+                app:is_circular="true" />
+
+            <Button
+                android:id="@+id/upload_button"
+                android:layout_width="115sp"
+                android:layout_height="30sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/white_button"
+                android:text="Upload Photo"
+                android:textAllCaps="false"
+                android:textColor="#828792" />
+
+            <EditText
+                android:id="@+id/profile_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dip"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/signup_name"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/signup_name"
+                android:hint="Name"
+                android:inputType="textPersonName"
+                android:nextFocusForward="@+id/profile_email"
+                android:singleLine="true" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5sp"
+                android:background="@color/underline" />
+
+            <EditText
+                android:id="@+id/profile_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/signup_email"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/signup_email"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:nextFocusForward="@+id/profile_location"
+                android:singleLine="true" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5sp"
+                android:background="@color/underline" />
+
+
+            <com.weareholidays.bia.widgets.CustomAutoCompleteTextView
+                android:id="@+id/profile_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/signup_location"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/signup_location"
+                android:hint="Place"
+                android:inputType="text"
+                android:nextFocusDown="@+id/profile_phone"
+                android:singleLine="true" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5sp"
+                android:background="@color/underline" />
+
+            <LinearLayout
+                android:id="@+id/profile_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:layout_width="15dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/signup_gender" />
+
+                <Spinner
+                    android:id="@+id/gender"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:entries="@array/gender_array"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5sp"
+                android:background="@color/underline" />
+
+            <EditText
+                android:id="@+id/profile_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/signup_phone"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/signup_phone"
+                android:hint="Mobile"
+                android:inputType="phone"
+                android:nextFocusForward="@+id/profile_password"
+                android:singleLine="true" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5sp"
+                android:background="@color/underline" />
+
+            <EditText
+                android:id="@+id/profile_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dip"
+                android:background="@android:color/transparent"
+                android:drawableLeft="@drawable/signup_lock"
+                android:drawablePadding="10dp"
+                android:drawableStart="@drawable/signup_lock"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:singleLine="true" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5sp"
+                android:background="@color/underline" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/continue_btn"
+        style="@style/PrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_orange"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

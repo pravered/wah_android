@@ -1,0 +1,39 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.weareholidays.bia.activities.profile.NotificationActivity"
+    android:background="#f2f2f2">
+
+
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="@string/no_notification"
+        android:gravity="center"
+        android:id="@+id/no_notification"
+        android:layout_below="@+id/toolbar"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/no_notification"
+        android:id="@+id/layout_1">
+
+        <ListView
+            android:id="@+id/notification"
+            android:paddingTop="@dimen/app_padding"
+            android:paddingBottom="@dimen/app_padding"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+
+    </LinearLayout>
+</RelativeLayout>
+

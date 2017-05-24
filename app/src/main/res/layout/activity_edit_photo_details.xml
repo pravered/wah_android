@@ -1,0 +1,156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/foreground"
+    tools:context="com.weareholidays.bia.activities.journal.photo.EditPhotoDetailsActivity">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:id="@+id/toolbar_cover"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/black"></LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar_cover">
+
+            <wahCustomViews.view.WahImageView android:id="@+id/full_image_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#8000">
+
+                <EditText
+                    android:id="@+id/caption"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:hint="@string/caption"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:singleLine="true"/>
+
+
+                <com.weareholidays.bia.widgets.ChipsMultiAutoCompleteTextview
+                    android:id="@+id/multiAutoCompleteTextView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/editphoto_tags"
+                    android:hint="@string/add_tags"
+                    android:textColor="@color/white"
+                    android:drawablePadding="10dp"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+
+                <EditText
+                    android:id="@+id/location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/add_location"
+                    android:focusableInTouchMode="false"
+                    android:editable="false"
+                    android:textColor="@color/white"
+                    android:drawablePadding="10dp"
+                    android:drawableLeft="@drawable/editphoto_location"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:singleLine="true"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/privacy_layout"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:layout_marginRight="@dimen/activity_horizontal_margin"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/privacy_settings"
+                        android:layout_weight="1"
+                        android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+                    <!--<ToggleButton-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:id="@+id/toggleButton"-->
+                        <!--android:drawableLeft="@drawable/lock_grey"-->
+                        <!--android:drawableRight="@drawable/lock_white"-->
+                        <!--android:drawableStart="@drawable/lock_grey"-->
+                        <!--android:drawableEnd="@drawable/lock_white"/>-->
+
+                    <ImageView
+                        android:id="@+id/lock_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/lock_white"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"/>
+
+                    <Switch
+                        android:id="@+id/toggleButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:track="@drawable/switch_custom_track"
+                        android:thumb="@drawable/switch_custom_thumb"/>
+
+                    <ImageView
+                        android:id="@+id/lock_closed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/lock_grey"
+                        android:layout_gravity="center_vertical"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:background="@color/photo_blue_primary_dark"
+                android:id="@+id/button_cancel2"
+                android:layout_weight="0.5"/>
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/save_details"
+                android:textAllCaps="false"
+                android:background="@color/white"
+                android:textColor="@color/photo_blue_primary"
+                android:id="@+id/button_save"
+                android:layout_weight="0.5"/>
+        </LinearLayout>
+
+</RelativeLayout>

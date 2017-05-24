@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:fab="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/trip_app_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/trip_fragment_app_bar_height_with_people"
+            android:theme="@style/WAH_Theme.TripTimeLine">
+
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapsing_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:collapsedTitleTextAppearance="@android:color/transparent"
+                app:contentScrim="@color/orange_primary"
+                app:expandedTitleTextAppearance="@android:color/transparent"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <LinearLayout
+                    android:id="@+id/top_level"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical"
+                    app:layout_collapseMode="none">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp">
+
+                        <wahCustomViews.view.WahImageView
+                            android:id="@+id/trip_wall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:fitsSystemWindows="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/placeholder_coverimage" />
+
+                        <View
+                            android:id="@+id/trip_wall_mask"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:background="#66000000" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="12dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/trip_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="end"
+                            android:paddingRight="10dp"
+                            android:singleLine="true"
+                            android:textColor="@color/trip_name_color"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/trip_date_text"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:textColor="#B34a4a4a"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/people"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="8dp"
+                        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                        android:layout_marginRight="@dimen/activity_horizontal_margin"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:id="@+id/selected_people_pics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:layout_marginRight="@dimen/activity_horizontal_margin"
+                            android:visibility="gone">
+
+                            <wahCustomViews.view.WahImageView
+                                android:id="@+id/first_contact_image"
+                                android:layout_width="24dp"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/user_placeholder"
+                                app:placeholder_img="@drawable/user_placeholder"
+                                android:scaleType="centerCrop"
+                                android:visibility="gone"
+                                app:is_circular="true" />
+
+                            <wahCustomViews.view.WahImageView
+                                android:id="@+id/second_contact_image"
+                                android:layout_width="24dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:background="@drawable/user_placeholder"
+                                app:placeholder_img="@drawable/user_placeholder"
+                                android:scaleType="centerCrop"
+                                android:visibility="gone"
+                                app:is_circular="true" />
+
+                            <wahCustomViews.view.WahImageView
+                                android:id="@+id/third_contact_image"
+                                android:layout_width="24dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="24dp"
+                                android:background="@drawable/user_placeholder"
+                                app:placeholder_img="@drawable/user_placeholder"
+                                android:scaleType="centerCrop"
+                                android:visibility="gone"
+                                app:is_circular="true" />
+
+                        </FrameLayout>
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/recycler_view"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:visibility="gone" />
+
+                        <!--<ImageView-->
+                        <!--android:id="@+id/add_people_button"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:visibility="gone"-->
+                        <!--android:src="@drawable/timeline_add_people_btn"/>-->
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/trip_tool_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/ThemeOverlay.WAH"
+                    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <LinearLayout
+                            android:id="@+id/trip_status_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerInParent="true"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/trip_status_icon"
+                                android:layout_width="8dp"
+                                android:layout_height="8dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginRight="5dp"
+                                android:src="@drawable/ongoing"
+                                android:visibility="gone" />
+
+                            <TextView
+                                android:id="@+id/trip_status"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ONGOING"
+                                android:textColor="#B3FFFFFF"
+                                android:textSize="12sp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/trip_name_in_tool_bar"
+                            style="@style/TextAppearance.AppCompat.Title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerInParent="true"
+                            android:ellipsize="end"
+                            android:singleLine="true"
+                            android:textColor="@color/white"
+                            android:visibility="gone" />
+
+                        <!--                    <LinearLayout
+                                                android:id="@+id/trip_done_btn"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentEnd="true"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_centerInParent="true"
+                                                android:layout_marginRight="25dp">
+
+                                                <ImageView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center_vertical"
+                                                    android:src="@drawable/timeline_tick" />
+
+                                                <TextView
+                                                    android:id="@+id/trip_done_text"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginLeft="5dp"
+                                                    android:text="FINISH TRIP"
+                                                    android:textColor="@color/white"
+                                                    android:textSize="14sp" />
+
+                                            </LinearLayout>-->
+
+                    </RelativeLayout>
+
+                </android.support.v7.widget.Toolbar>
+
+                <include layout="@layout/trip_tabs" />
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/trip_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/trip_app_bar"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <ImageView
+            android:id="@+id/back_image"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/transparent_black_background"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:orientation="vertical">
+
+            <com.getbase.floatingactionbutton.FloatingActionsMenu
+                android:id="@+id/floating_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end|bottom"
+                android:layout_margin="16dp"
+                fab:fab_addButtonColorNormal="@color/app_orange"
+                fab:fab_addButtonColorPressed="@color/app_orange"
+                fab:fab_addButtonPlusIconColor="@color/white"
+                fab:fab_labelStyle="@style/menu_labels_style">
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btn_check_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:fab_icon="@drawable/float_checkin"
+                    app:fab_size="normal"
+                    fab:fab_colorNormal="@color/app_orange"
+                    fab:fab_colorPressed="@color/app_light_grey"
+                    fab:fab_title="Check In" />
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btn_photo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/app_blue"
+                    fab:fab_colorPressed="@color/app_light_grey"
+                    fab:fab_icon="@drawable/floatingbutton_photo"
+                    fab:fab_size="normal"
+                    fab:fab_title="Photo" />
+
+                <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/btn_video"-->
+                <!--fab:fab_icon="@drawable/video_mini_icon"-->
+                <!--fab:fab_colorNormal="@color/app_sky_blue"-->
+                <!--fab:fab_colorPressed="@color/app_light_grey"-->
+                <!--fab:fab_title="Day Route"-->
+                <!--fab:fab_size="normal"/>-->
+
+                <com.getbase.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/btn_notes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    fab:fab_colorNormal="@color/app_red"
+                    fab:fab_colorPressed="@color/app_light_grey"
+                    fab:fab_icon="@drawable/floatingbutton_notes"
+                    fab:fab_size="normal"
+                    fab:fab_title="Notes" />
+
+            </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+            <Button
+                android:id="@+id/publish_trip_btn"
+                style="@style/PrimaryButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_orange"
+                android:text="@string/publish_trip"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/sync_trip_btn"
+                style="@style/PrimaryButton"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/app_orange"
+                android:text="@string/sync_trip"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+
+    <RelativeLayout
+        android:id="@+id/loader_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/finish_trip_fragment_background"
+        android:padding="@dimen/screen_padding"
+        android:visibility="gone">
+
+        <wahCustomViews.view.CircularProgressBar
+            android:id="@+id/circular_progress_bar"
+            style="@style/Widget.ProgressBar.Holo.CircularProgressBar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true" />
+
+        <TextView
+            android:id="@+id/loader_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/circular_progress_bar"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/loader_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loader_text"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/publish_trip_layout"
+        layout="@layout/fragment_publish_trip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/finish_trip_layout"
+        layout="@layout/fragment_finish_trip"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/error_fragment"
+        layout="@layout/fragment_error_uploading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <include
+        android:id="@+id/publish_sucess"
+        layout="@layout/fragment_publish_success"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</FrameLayout>

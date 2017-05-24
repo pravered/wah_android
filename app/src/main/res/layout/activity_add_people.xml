@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/white"
+    tools:context="com.weareholidays.bia.activities.journal.people.AddPeopleActivity">
+
+    <!--<HorizontalScrollView-->
+        <!--android:id="@+id/hList"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/selected_people"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+        <!--</LinearLayout>-->
+
+    <!--</HorizontalScrollView>-->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/mylinear"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin">
+
+        <EditText
+            android:layout_below="@+id/my_recycler_view"
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="@string/search_people"
+            android:drawableRight="@drawable/search_people"
+            android:drawableEnd="@drawable/search_people"
+            android:drawablePadding="10dp"
+            android:singleLine="true"
+            android:textCursorDrawable="@null"
+            android:background="@android:color/transparent"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/underline"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_marginTop="5sp"/>
+
+    </LinearLayout>
+
+    <!--<include-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="@dimen/activity_vertical_margin"-->
+        <!--layout="@layout/add_people_tabs"-->
+        <!--android:id="@+id/contact_tabs"-->
+        <!--android:layout_below="@+id/search"/>-->
+
+    <com.weareholidays.bia.widgets.SlidingTabLayout
+        android:id="@+id/sliding_tabs"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:layout_below="@+id/mylinear"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_below="@id/sliding_tabs"
+        android:background="#80f2f2f2"
+        android:layout_height="fill_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/contact_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="#f2f2f2"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:background="@drawable/toolbar_dropshadow" />
+
+    </FrameLayout>
+
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:background="#9FADB5"
+        android:textColor="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_people"
+        android:text="@string/add_people"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

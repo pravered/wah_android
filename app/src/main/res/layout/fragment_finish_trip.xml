@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_finish_trip_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/finish_trip_fragment_background"
+    android:padding="@dimen/screen_padding_double"
+    android:visibility="gone">
+
+    <TextView
+        android:id="@+id/finish_trip_title"
+        fontPath="fonts/roboto/Roboto-Bold.ttf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/screen_padding"
+        android:gravity="center"
+        android:text="@string/finish_trip_title"
+        android:textSize="@dimen/text_size_18"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/skip_finish"
+        android:layout_below="@+id/finish_trip_title"
+        android:layout_marginTop="@dimen/screen_padding_double"
+        android:layout_marginBottom="@dimen/screen_padding_plus_half">
+
+        <TextView
+            android:id="@+id/finish_trip_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"
+            android:text="@string/finish_trip_detail"
+            android:textSize="@dimen/text_size_14" />
+
+        <ImageView
+            android:id="@+id/finish_trip_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/finishtrip_graphics" />
+
+        <Button
+            android:id="@+id/finish_trip_btn"
+            style="@style/PrimaryButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/app_orange"
+            android:layout_alignParentBottom="true"
+            android:text="@string/finish_trip"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/skip_finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/finish_trip_skip"
+        android:textColor="@color/app_sky_blue"
+        android:textSize="@dimen/text_size_14" />
+</RelativeLayout>

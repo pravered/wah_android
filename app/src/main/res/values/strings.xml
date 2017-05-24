@@ -1,0 +1,336 @@
+<resources>
+    <string name="app_name">Bia</string>
+    <string name="hello_world"></string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_add_trip_note">AddTripNoteActivity</string>
+    <string name="type_here">Type here</string>
+    <string name="max_length">MAX : 300 CHARACTERS</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="submit_photos">Submit Photos</string>
+    <string name="caption">Add a caption...</string>
+    <string name="add_tags">Add tags</string>
+    <string name="add_location">Add location</string>
+    <string name="save_details">Save Details</string>
+    <string name="privacy_settings">Privacy Settings</string>
+    <string name="button_continue">Continue</string>
+    <string name="title_activity_edit_profile">EditProfileActivity</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_check_in">CheckInActivity</string>
+
+    <string-array name="gender_array">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string name="view_profile">VIEW PROFILE</string>
+    <string name="notification">Notification</string>
+    <string name="been_there">Been There</string>
+    <string name="share_feedback">Share feedback</string>
+    <string name="feedback_text">You are awesome. Share your feedback below. You can also mail us on reach@bia-app.com</string>
+    <string name="feedback_email"></string>
+    <string name="coupon_code">Coupon Code</string>
+    <string name="invite_friends">Invite friends and earn</string>
+    <string name="account_settings">Account Settings</string>
+    <string name="edit_profile">Edit Profile Info</string>
+    <string name="notifications">Notifications</string>
+    <string name="rate_us">Rate us on Play Store</string>
+    <string name="share_with_friends">Share with friends</string>
+    <string name="location_permission_text">Access to current location</string>
+    <string name="location_permission_description">To log your trip</string>
+    <string name="auto_checkin_permission_text">Automatically Check-in</string>
+    <string name="auto_checkin_permission_desc">To automatically check-in nearby locations on your trip</string>
+    <string name="camera_permission_text">Access to camera roll</string>
+    <string name="camera_permission_desc">To upload your trip photos and videos</string>
+    <string name="version"></string>
+    <string name="facebook">Facebook</string>
+    <string name="fb_permission_desc">To include your posts, check-ins and photos during your trip</string>
+    <string name="fb_share">Allow app to post this trip on your profile</string>
+    <string name="twitter">Twitter</string>
+    <string name="gallery">Gallery</string>
+    <string name="twitter_permission_desc">To include your tweets during your trip</string>
+    <string name="instagram">Instagram</string>
+    <string name="insta_permission_desc">To include your photos during your trip</string>
+    <string name="wah_sync_permission_text">Sync</string>
+    <string name="wah_sync_permission_desc">Upload your trip data while on trip to keep in sync &amp; avoid data loss</string>
+    <string name="logout">LOGOUT</string>
+    <string name="delete">Delete</string>
+    <string name="edit">Edit</string>
+    <string name="search_people">Search People</string>
+    <string name="search">Search</string>
+    <string name="phonebook_caps">PHONEBOOK</string>
+    <string name="twitter_caps">TWITTER</string>
+    <string name="facebook_caps">FACEBOOK</string>
+    <string name="start_trip_log_header">Log your Trip \n&amp; Relive it Later</string>
+    <string name="signup_header">Log your Trip &amp;\nRelive it Later</string>
+    <string name="sign_up_sharer_name">INR 500 from %1$s</string>
+    <string name="start_trip_log_subheader">Create beautiful trip journals effortlessly.
+        \nKeep them private, share with friends &amp; family or inspire others</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="title_activity_notification">NotificationActivity</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="title_activity_photo_gallery">PhotoGalleryActivity</string>
+    <string name="title_activity_journal">JournalActivity</string>
+    <string name="title_activity_journal01">Journal01Activity</string>
+    <string name="title_activity_journal03"></string>
+    <string name="title_activity_journal04">Journal04Activity</string>
+    <string name="Trip_name_placeholder">Trip Name</string>
+    <string name="upload_timeline_wallpaper">Upload Image</string>
+
+    <string name="title_activity_selected_photo">SelectedPhotoActivity</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="title_activity_sign_up_email">SignUpEmailActivity</string>
+    <string name="title_activity_sign_up_facebook">SignUpFacebookActivity</string>
+    <string name="signup_email">Sign Up with Email</string>
+    <string name="login_email">Login with Email</string>
+    <string name="signup_facebook">Continue with Facebook</string>
+    <string name="finish">FINISH TRIP</string>
+    <string name="str_btn_draw">draw</string>
+    <string name="title_activity_set_photo_location">SetPhotoLocationActivity</string>
+    <string name="required">Required</string>
+    <string name="toat_trip_start_error">An error occured while creating trip!</string>
+    <string name="login_error">Check your email address</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="map_title">TOTAL DISTANCE</string>
+    <string name="title_activity_custom_grid">CustomGridActivity</string>
+    <string name="title_activity_custom_gallery">CustomGalleryActivity</string>
+    <string name="title_activity_recycler_view">RecyclerViewActivity</string>
+    <string name="finish_trip">Finish Trip</string>
+    <string name="trip_overview">TRIP OVERVIEW</string>
+    <string name="summary_distance">DISTANCE</string>
+    <string name="summary_duration">DURATION</string>
+    <string name="social_overview">SOCIAL OVERVIEW</string>
+    <string name="summary_fb">FB POSTS</string>
+    <string name="summary_twitter">TWEETS</string>
+    <string name="summary_instagram">INSTAGRAM</string>
+    <string name="summary_notes">NOTES</string>
+    <string name="summary_check_in">CHECK-INS</string>
+    <string name="summary_photos">PHOTOS</string>
+    <string name="toast_add_photo_error">An Error occured while adding the photo</string>
+    <string name="toast_add_note_error">An Error occured while adding the note</string>
+    <string name="toast_add_check_in_error">An Error occured while checking in</string>
+    <string name="title_activity_map">MapActivity</string>
+    <string name="title_activity_trip_settings">TripSettingsActivity</string>
+    <string name="facebook_permissions_error_text">Facebook sync is disabled as required permissions are not given to the app!</string>
+    <string name="twitter_permissions_error_text">Twitter sync is disabled as required permissions are not given to the app!</string>
+    <string name="instagram_permissions_error_text">Instagram sync is disabled as required permissions are not given to the app!</string>
+    <string name="permissions">Permissions</string>
+    <string name="title_activity_route">RouteActivity</string>
+    <string name="title_activity_add_people">AddPeopleActivity</string>
+    <string name="title_activity_fb">FBActivity</string>
+    <string name="title_activity_yjk">yjk</string>
+    <string name="title_activity_twitter">TwitterActivity</string>
+    <string name="title_activity_inst">InstActivity</string>
+    <string name="title_activity_notes">NotesActivity</string>
+    <string name="title_activity_route_map">RouteMapActivity</string>
+    <string name="title_activity_photo">PhotoActivity</string>
+    <string name="title_activity_distance">DistanceActivity</string>
+    <string name="title_activity_checkin">CheckInActivity</string>
+    <string name="ok">OK</string>
+    <string name="finish_trip_warning">Do you want end the current trip?</string>
+    <string name="finish_trip_lower">Finish Trip   </string>
+    <string name="loading_contact">Loading Contacts...</string>
+    <string name="contacts_not_found">No Contacts found</string>
+    <string name="loading_facebook">Loading Facebook friends</string>
+    <string name="error_loading_facebook">Error loading facebook friends...</string>
+    <string name="no_facebook_friends">No Facebook friends found</string>
+    <string name="publish_trip">Publish Trip</string>
+    <string name="action_trip_change_photo">Change Photo</string>
+    <string name="action_reorder_posts">Reorder Posts</string>
+    <string name="action_delete_posts">Delete Posts</string>
+    <string name="action_edit_people">Edit People</string>
+    <string name="action_share_journal">Share Journal</string>
+    <string name="action_edit_trip_name">Edit Trip Name</string>
+    <string name="give_permission">GIVE PERMISSION</string>
+    <string name="not_now">NOT NOW</string>
+    <string name="add_people">Add People</string>
+    <string name="share_people">Share People</string>
+    <string name="title_activity_edit_photo_details">EditPhotoDetailsActivity</string>
+    <string name="title_activity_been_there">BeenThereActivity</string>
+    <string name="title_activity_publish_trip">PublishTripActivity</string>
+    <string name="title_activity_timeline_edit">TimelineEditActivity</string>
+    <string name="title_activity_change_image">ChangeImageActivity</string>
+    <string name="title_activity_duration">DurationActivity</string>
+    <string name="title_activity_day_duration">DayDurationActivity</string>
+    <string name="title_activity_reorder">ReorderActivity</string>
+    <string name="apply">APPLY</string>
+    <string name="invalid_coupon">Invalid Coupon Code!</string>
+    <string name="used_coupon">Coupon already applied</string>
+    <string name="enter_valid">Please enter valid coupon code and try again</string>
+    <string name="applied">Applied Successfully</string>
+    <string name="already_applied">Already Applied</string>
+    <string name="no_ongoing_trip">Coupon can only be applied when trip is ongoing.</string>
+    <string name="coupon_already_applied">Only one coupon can be used per trip</string>
+    <string name="applied_msg">Lorem ipsum dolor sit amet, consectetuer adipiscing</string>
+    <string name="no_net">No Internet!</string>
+    <string name="no_net_msg">Please connect to a working Internet connection</string>
+    <string name="Continue">Continue</string>
+    <string name="close">Close</string>
+    <string name="no_notification">There are no notifications.</string>
+    <string name="action_delete_journal">Delete Trip</string>
+    <string name="action_unpublish_journal">Unpublish Trip</string>
+    <string name="title_activity_share_trip">ShareTripActivity</string>
+    <string name="share1">Share with Friends</string>
+    <string name="share2">Share via Other Apps</string>
+    <string name="title_activity_terms">TermsActivity</string>
+    <string name="title_activity_privacy_policy">PrivacyPolicyActivity</string>
+    <string name="title_activity_search">SearchActivity</string>
+    <string name="title_activity_trips_list">TripsListActivity</string>
+    <string name="dismiss">DISMISS</string>
+    <string name="title_activity_photo_timeline">PhotoTimelineActivity</string>
+    <string name="no_users_text">No Users to show.</string>
+    <string name="user_list">USERS</string>
+    <string name="upload_trip">Upload Trip</string>
+    <string name="sync_trip">Save Trip</string>
+    <string name="view_trip">VIEW TRIP</string>
+    <string name="retry_trip">RETRY</string>
+    <string name="title_activity_password">PasswordActivity</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="password_reset">Setting up a new password for your account</string>
+    <string name="title_activity_onboarding">OnboardingActivity</string>
+
+    <!-- oboarding screens -->
+    <string name="heading1">Log your trip</string>
+    <string name="heading2">Built socially</string>
+    <string name="heading3">Works online &amp; offline</string>
+    <string name="heading4">Be in control</string>
+    <string name="heading5">Fully private</string>
+    <string name="heading6">Inspire others</string>
+
+    <string name="content1">Automatically import all pictures &amp; videos as\nyou capture them.Add notes &amp; check-ins\nas well.</string>
+    <string name="content2">Automatically import &amp; aggregate all your social\nposts during your trip.</string>
+    <string name="content3">Add pictures,notes &amp; check-ins with accurate\nlocation &amp; GPS coordinates even when there is\nno data or mobile connection</string>
+    <string name="content4">Choose what\'s in your trip journal.Delete things\nor make them private <b>(visible only to you)</b>.\nEdit any time.</string>
+    <string name="content5">Keep your trips private, share with friends or\nfamily or with everyone else. We don\'t post or\nshare anything by default.</string>
+    <string name="content6">Share your trips with other travellers and help\nthem plan their own trips.</string>
+
+    <string name="title_feature_user">Featured Users</string>
+    <string name="current_location">CURRENT LOCATION</string>
+    <string name="title_activity_photo_details">PhotoDetailsActivity</string>
+    <string name="action_delete_photo">Delete Photo</string>
+    <string name="action_trip_remove_photo">Remove Photo</string>
+    <string name="user_location">User Location</string>
+    <string name="title_activity_user_profile">UserProfileActivity</string>
+    <string name="title_activity_search_bridge">SearchBridgeActivity</string>
+    <string name="title_activity_duration_map">DurationMapActivity</string>
+    <string name="title_activity_delete">DeleteActivity</string>
+    <string name="password_mismatch">Password Mismatch</string>
+    <string name="action_permissions">Permissions</string>
+    <string name="action_coupon">Apply coupon</string>
+    <string name="title_activity_note">NoteActivity</string>
+    <string name="action_edit_posts">Edit Posts</string>
+    <string name="title_activity_forgot_password">ForgotPasswordActivity</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="logout_warning_upload_message">You have not uploaded a finished trip. Please upload the trip to be able to logout</string>
+    <string name="title_activity_feedback">FeedbackActivity</string>
+
+    <!-- CoachMarks -->
+    <string name="coachmark_button_gotit">Got it</string>
+
+    <string-array name="coachmark_trip">
+        <item name="coachmark_disover_view_trip">Tap to view\na trip journal</item>
+    </string-array>
+
+    <string-array name="coachmark_disover">
+        <item name="coachmark_discover_tab">Tap to discover\ntrip journals\ncreated\nby others.</item>
+        <item name="coachmark_journal_tab">Tap to create\na new trip\njournal.</item>
+        <item name="coachmark_more_tab">Tap to apply\ncoupon code,\nrate us, etc.</item>
+        <item name="coachmark_view_trip">Tap to view\na trip journal</item>
+    </string-array>
+
+    <string-array name="coachmark_moretab">
+        <item name="coachmark_coupon_code">Tap to view\n all notifications.</item>
+        <item name="coachmark_share">Tap to share Bia\n with your friends.</item>
+    </string-array>
+
+    <string-array name="coachmark_create_trip">
+        <item name="coachmark_trip_image">Add a cover\npic. You can\nadd one later\nas well or\nchange it.</item>
+        <item name="coachmark_trip_name">Give your trip\na name. You can\nchange it later.</item>
+        <item name="coachmark_trip_people">Add your\nco-travellers\nto the trip.</item>
+    </string-array>
+
+    <string-array name="coachmark_journal_empty_summary_tab">
+        <item name="coachmark_tripfinish">Tap to finish trip,\nedit post,etc.</item>
+        <item name="coachmark_tripday">Tap to view the first\nday of your trip.</item>
+        <item name="coachmark_tripoverview">Summary of your distance,\ncheck-ins, photos &amp; duration\non maps.</item>
+        <item name="coachmark_tripfinish">Summary of your social\nposts &amp; tweets.</item>
+    </string-array>
+
+    <string-array name="coachmark_journal_empty_day">
+        <item name="coachmark_tripfinish">Tap to finish trip,\nedit post,etc.</item>
+        <item name="coachmark_tripday">Tap to view your\ntrip summary.</item>
+        <item name="coachmark_tripoverview">Tap to add\nphotos notes &amp; check-ins.</item>
+    </string-array>
+
+    <string-array name="coachmark_finish_trip">
+        <item name="coachmark_tripfinish">Tap to finish trip,\nedit post, etc.</item>
+        <item name="coachmark_tripday">Tap to view your\ntrip summary.</item>
+        <item name="coachmark_tripoverview">Tap to add\nphotos notes &amp; check-ins.</item>
+    </string-array>
+
+    <string-array name="coachmark_published_trip">
+        <item name="coachmark_tripshare">Tap to share\ntrip journal.</item>
+        <item name="coachmark_tripsummary">Tap to view distance\ntravelled on map.</item>
+        <item name="coachmark_tripbutton">Tap to view \ncheck-ins on\n map.</item>
+        <item name="coachmark_tripbutton">Tap to view\nphotos\non map.</item>
+    </string-array>
+
+    <string-array name="coachmark_publish_trip">
+        <item name="coachmark_publish_trip_text">Tap to publish your\ntrip &amp; share with other\ntravellers, inspire them.</item>
+
+    </string-array>
+
+    <string-array name="coachmark_permissions">
+        <item name="coachmark_permissions_text">Bia needs some basic permissions to\ncreate a beautiful trip.\n
+            \nBia does not post anything on\nyour behalf on Facebook, Twitter or\nInstagram.</item>
+    </string-array>
+
+    <string-array name="coachmark_notification">
+        <item name="coachmark_delete"> Swipe right/left\nto delete notification.</item>
+    </string-array>
+
+    <!-- Trip Fragment -->
+    <string name="finish_trip_title">Reached back home?\nWant to finish your trip?</string>
+    <string name="finish_trip_detail">On finishing trip, Bia will stop capturing your location, photos &amp; social posts and start saving your trip.</string>
+    <string name="finish_trip_skip">I\'ll do it later</string>
+
+    <!-- Publish Trip fragment -->
+    <string name="publish_trip_success_msg">Your trip is saved successfully!</string>
+    <string name="publish_trip_title">Publish &amp; share it with others</string>
+    <string name="publish_trip_share_fb">Also share on facebook</string>
+
+    <!--Upload error Fragment -->
+    <string name="upload_error">Your trip is finished, but it\'s not saved. Saving a trip is required before you can share or publish it.</string>
+    <string name="try_again">Try Again</string>
+    <string name="report_error">Report Issue</string>
+
+    <!-- Invite friends Ativity -->
+    <string name="title_activity_invite_friends">Invite friends and earn</string>
+    <string name="activity_invite_friends_title">Get a Flipkart voucher worth INR 500</string>
+    <string name="activity_invite_friends_desc">As soon as they create and publish their first trip. They get a Flipkart voucher worth INR 500 too.</string>
+    <string name="activity_invite_friends_share">Share your personal link with friends.</string>
+    <string name="activity_invite_friends_button_text">Invite friends</string>
+    <string name="activity_invite_friends_details">Details</string>
+    <string name="dialog_invite_friends_desc">Share you personal link with friends.Once they create and publish their first trip on Bia, you each get Flipkart voucher worth Rs 500.\nThere is no limit.Invite them all and earn more! See Terms &amp; Conditions.</string>
+
+    <!-- Share Published Trip -->
+    <string name="publish_trip_share">Your trip is published successfully!</string>
+    <string name="publish_trip_share_btn">Share trip</string>
+
+    <!-- WebView Activity -->
+    <string name="web_view_activity_title">Web View</string>
+    <string name="title_activity_user_notification">Notifications</string>
+
+    <!-- GeoFence Messages -->
+    <string name="geofence_return_trip">Reached Home? Finish you trip on Bia to create an awesome holiday album. Share it with friends and have fun.</string>
+    <string name="geofence_start_trip">Going on a vacation? Log your trip on Bia and get a Flipkart voucher worth Rs 500. Use code "Awesome". Terms &amp; Conditions applied.</string>
+
+    <!-- TripStart Activity -->
+    <string name="trip_start_apply_coupon">Have a coupon?</string>
+    <string name="trip_start_coupon_applied">%1$s applied. Change?</string>
+</resources>

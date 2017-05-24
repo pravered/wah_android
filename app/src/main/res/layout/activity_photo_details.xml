@@ -1,0 +1,267 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.weareholidays.bia.activities.journal.photo.PhotoDetailsActivity">
+
+    <FrameLayout
+        android:id="@+id/bg"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <ImageView
+            android:id="@+id/background"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <ImageView
+            android:id="@+id/foreground"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:alpha="0.8"
+            android:background="@color/black" />
+
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/cross"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/activity_vertical_margin"
+            android:src="@drawable/timeline_reorderpost_cross" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/user_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cross"
+        android:orientation="horizontal"
+        android:padding="@dimen/activity_vertical_margin">
+
+        <wahCustomViews.view.WahImageView
+            android:id="@+id/user_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerCrop"
+            android:src="@drawable/user_placeholder"
+            app:is_circular="true" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/pic_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#9fa0a2"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--<fragment-->
+    <!--android:id="@+id/location_map"-->
+    <!--android:layout_below="@+id/user_info"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="75dp"-->
+    <!--class="com.google.android.gms.maps.SupportMapFragment" />-->
+
+    <wahCustomViews.view.WahImageView
+        android:id="@+id/location_map"
+        android:layout_width="match_parent"
+        android:scaleType="centerCrop"
+        android:layout_height="75dp"
+        android:layout_below="@+id/user_info" />
+
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/location_map"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="20dp"
+        android:drawableLeft="@drawable/editphoto_location"
+        android:drawablePadding="10dp"
+        android:drawableStart="@drawable/editphoto_location"
+        android:text="No location found"
+        android:textColor="@color/white" />
+
+    <View
+        android:id="@+id/separator1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/location"
+        android:layout_marginTop="20dp"
+        android:background="#595959" />
+
+    <LinearLayout
+        android:id="@+id/tags"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/separator1"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/editphoto_tags" />
+
+        <TextView
+            android:id="@+id/no_tags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:text="No tags found"
+            android:textColor="@color/white"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/first_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/photo_tags_bg"
+            android:padding="6dp"
+            android:textColor="@color/white"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/second_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/photo_tags_bg"
+            android:padding="6dp"
+            android:textColor="@color/white"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/third_tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/photo_tags_bg"
+            android:padding="6dp"
+            android:textColor="@color/white"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/more_tags"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="end"
+            android:textColor="@color/white"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tags"
+        android:layout_marginTop="10dp"
+        android:background="#595959" />
+
+    <!-- to be put later
+    <LinearLayout
+        android:id="@+id/featured"
+        android:layout_below="@+id/separator2"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#bbb"
+            android:text="Featured in this photo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Sultan Ahmed Mosque"/>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/separator3"
+        android:layout_below="@+id/featured"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:background="#979797"/>
+
+    <LinearLayout
+        android:id="@+id/featured_trips"
+        android:layout_below="@+id/separator3"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/photo_journal"
+            android:drawableStart="@drawable/photo_journal"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="View All"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="View all comments"
+        android:textColor="@color/white"/>
+        -->
+
+</RelativeLayout>

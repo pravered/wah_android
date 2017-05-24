@@ -1,0 +1,96 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f2f2f2"
+    app:theme="@style/Theme.Transparent">
+
+    <wahCustomViews.view.WahImageView
+        android:id="@+id/map_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        app:placeholder_img="@drawable/image_loader">
+    </wahCustomViews.view.WahImageView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:background="@drawable/map_gradient">
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="18dp"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="0dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/disp_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="6dp"
+                    android:paddingLeft="1dp"
+                    android:src="@drawable/timeline_pin" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:paddingLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/placeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textColor="#0a0606" />
+
+                    <TextView
+                        android:id="@+id/country_text"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#8C0c0a0c"
+                        android:textSize="10sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/line"
+                android:layout_width="1dp"
+                android:layout_height="65dp"
+                android:background="@color/timeline_color"
+                android:layout_marginLeft="17dp"
+                android:orientation="vertical">
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/plus_timeline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:paddingTop="5dp"
+                android:src="@drawable/plus_timeline"/>
+        </LinearLayout>
+
+    </FrameLayout>
+</RelativeLayout>

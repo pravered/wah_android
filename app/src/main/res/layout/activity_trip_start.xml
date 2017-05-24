@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.weareholidays.bia.activities.journal.trip.TripStartActivity">
+
+    <include
+        android:id="@+id/journal_bar"
+        layout="@layout/journal_bar" />
+
+    <LinearLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="160dp"
+        android:layout_below="@+id/journal_bar"
+        android:layout_centerHorizontal="true"
+        android:background="#d8d8d8"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/trip_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="@string/Trip_name_placeholder"
+            android:inputType="textCapWords"
+            android:padding="20dp"
+            android:singleLine="true"
+            android:textColor="@color/app_light_grey"
+            android:textColorHint="@color/app_light_grey"
+            android:textCursorDrawable="@null"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@color/underline2" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/selected_people_pics"
+                android:layout_width="wrap_content"
+                android:layout_height="24dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:visibility="gone">
+
+                <wahCustomViews.view.WahImageView
+                    android:id="@+id/first_contact_image"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/user_placeholder"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    app:is_circular="true"
+                    app:placeholder_img="@drawable/user_placeholder" />
+
+                <wahCustomViews.view.WahImageView
+                    android:id="@+id/second_contact_image"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:background="@drawable/user_placeholder"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    app:is_circular="true"
+                    app:placeholder_img="@drawable/user_placeholder" />
+
+                <wahCustomViews.view.WahImageView
+                    android:id="@+id/third_contact_image"
+                    android:layout_width="24dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24dp"
+                    android:background="@drawable/user_placeholder"
+                    android:scaleType="centerCrop"
+                    android:visibility="gone"
+                    app:is_circular="true"
+                    app:placeholder_img="@drawable/user_placeholder" />
+
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/imageButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="30dp"
+                android:onClick="addPeople"
+                android:src="@drawable/timeline_add_people_btn" />
+
+            <TextView
+                android:id="@+id/people_selected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_alignBottom="@+id/relativeLayout"
+        android:background="@color/underline2" />
+
+    <Button
+        android:id="@+id/apply_coupon"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_continue"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/bg_dialog_edit_field"
+        android:paddingLeft="@dimen/screen_padding_triple"
+        android:paddingRight="@dimen/screen_padding_triple"
+        android:text="@string/trip_start_apply_coupon" />
+
+    <Button
+        android:id="@+id/btn_continue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/app_orange"
+        android:onClick="startTrip"
+        android:text="@string/Continue"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="15sp" />
+
+
+</RelativeLayout>

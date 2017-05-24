@@ -1,0 +1,420 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!--<style name="CustomActionBarTheme" parent="Theme.Sherlock.Light">-->
+        <!--<item name="android:actionBarTabStyle">@style/MyActionBarTabStyle</item>-->
+        <!--<item name="actionBarTabStyle">@style/MyActionBarTabStyle</item>-->
+    <!--</style>-->
+    <style name="WAH_Theme" parent="WAH_Theme.Orange">
+
+    </style>
+
+    <style name="WAH_Theme.Orange" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <!--We will be using the toolbar so no need to show ActionBar-->
+        <item name="windowActionBar">false</item>
+        <!-- Set theme colors from http://www.google.com/design/spec/style/color.html#color-color-palette-->
+        <!-- colorPrimary is used for the default action bar background -->
+        <item name="colorPrimary">@color/orange_primary</item>
+        <!-- colorPrimaryDark is used for the status bar -->
+        <item name="colorPrimaryDark">@color/orange_primary_dark</item>
+        <!-- colorAccent is used as the default value for colorControlActivated
+             which is used to tint widgets -->
+        <item name="colorAccent">@color/orange_accent</item>
+        <item name="colorButtonNormal">@color/orange_primary</item>
+        <item name="buttonStyle">@style/My.Button</item>
+        <item name="colorControlNormal">#A5A5A5</item>
+        <item name="colorControlActivated">#A5A5A5</item>
+        <item name="colorControlHighlight">#A5A5A5</item>
+        <!--<item name="android:popupMenuStyle">@style/PopupMenu</item>-->
+    </style>
+
+    <style name="WAH_Theme.People" parent="Theme.AppCompat.Light">
+        <item name="android:textColor">@color/trip_name_color</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">#9FADB5</item>
+        <item name="editTextColor">#A5A5A5</item>
+        <item name="android:textColorHint">#A5A5A5</item>
+        <item name="colorControlNormal">#A5A5A5</item>
+        <item name="colorControlActivated">@color/app_orange</item>
+        <item name="colorControlHighlight">#A5A5A5</item>
+        <item name="colorAccent">@color/app_orange</item>
+        <item name="buttonStyle">@style/My.Button</item>
+    </style>
+    
+    <style name="CheckBox_Theme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorAccent">@color/app_orange</item>
+    </style>
+
+
+    <style name="WAH_Theme.Photo" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:titleTextAppearance" tools:ignore="NewApi">@style/ToolbarTitle</item>
+        <item name="android:subtitleTextAppearance" tools:ignore="NewApi">@style/ToolbarSubTitle</item>
+        <item name="colorPrimary">@color/photo_blue_primary</item>
+        <item name="colorPrimaryDark">@color/photo_blue_primary_dark</item>
+        <item name="buttonStyle">@style/My.Button</item>
+    </style>
+
+    <style name="WAH_Theme.Route" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/orange_primary</item>
+        <item name="colorPrimaryDark">@color/orange_primary_dark</item>
+        <item name="buttonStyle">@style/My.Button</item>
+    </style>
+
+    <style name="WAH_Theme.PhotoSetLocation" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/photo_blue_primary</item>
+        <item name="colorPrimaryDark">@color/photo_blue_primary_dark</item>
+        <item name="buttonStyle">@style/My.Button</item>
+    </style>
+
+    <style name="WAH_Theme.Note" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/note_pink_primary</item>
+        <item name="colorPrimaryDark">@color/note_pink_primary_dark</item>
+        <item name="buttonStyle">@style/My.Button</item>
+        <item name="editTextColor">#A5A5A5</item>
+        <item name="android:textColorHint">#b0b2b4</item>
+        <item name="colorControlNormal">#b0b2b4</item>
+        <item name="colorControlActivated">#b0b2b4</item>
+        <item name="colorControlHighlight">#b0b2b4</item>
+    </style>
+
+    <style name="WAH_Theme.Video" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/video_blue_primary</item>
+        <item name="colorPrimaryDark">@color/video_blue_primary_dark</item>
+        <item name="buttonStyle">@style/My.Button</item>
+    </style>
+
+    <style name="WAH_Theme.Publish" parent="WAH_Theme">
+        <item name="colorAccent">@color/app_orange</item>
+        <item name="colorControlActivated">@color/app_orange</item>
+    </style>
+
+    <style name="WAH_Theme.Twitter" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/twitter_blue_primary</item>
+        <item name="colorPrimaryDark">@color/twitter_blue_primary_dark</item>
+        <item name="buttonStyle">@style/My.Button</item>
+    </style>
+
+    <style name="WAH_Theme.Distance" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/distance_blue_primary</item>
+        <item name="colorPrimaryDark">@color/distance_blue_primary_dark</item>
+        <item name="buttonStyle">@style/My.Button</item>
+    </style>
+
+    <style name="WAH_Theme.Duration" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/duration_yellow_primary</item>
+        <item name="colorPrimaryDark">@color/duration_yellow_primary_dark</item>
+        <item name="buttonStyle">@style/My.Button</item>
+    </style>
+
+    <style name="WAH_Theme.CheckIn" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/orange_primary</item>
+        <item name="colorPrimaryDark">@color/orange_primary_dark</item>
+        <item name="buttonStyle">@style/My.Button</item>
+    </style>
+
+    <style name="WAH_Theme.Photos" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/photo_blue_primary</item>
+        <item name="colorPrimaryDark">@color/photo_blue_primary_dark</item>
+        <item name="buttonStyle">@style/My.Button</item>
+    </style>
+
+    <style name="WAH_Theme.Facebook" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/facebook_blue_primary</item>
+        <item name="colorPrimaryDark">@color/facebook_blue_primary_dark</item>
+        <item name="buttonStyle">@style/My.Button</item>
+    </style>
+
+    <style name="WAH_Theme.Instagram" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/instagram_blue_primary</item>
+        <item name="colorPrimaryDark">@color/instagram_blue_primary_dark</item>
+        <item name="buttonStyle">@style/My.Button</item>
+    </style>
+
+    <style name="WAH_Theme.TripStart" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColor">@color/app_light_grey</item>
+        <item name="buttonStyle">@style/My.Button</item>
+    </style>
+
+    <style name="WAH_Theme.TripTimeLine" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@android:color/white</item>
+        <item name="colorPrimaryDark">@color/grey_shaded_color</item>
+        <item name="android:textColor">@color/trip_name_color</item>
+        <item name="buttonStyle">@style/My.Button</item>
+    </style>
+
+    <style name="WAH_Theme.TripPermissions" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/grey_primary_color</item>
+        <item name="colorPrimaryDark">@color/grey_shaded_color</item>
+        <item name="android:textColorPrimary">@color/black</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:textColor">@color/text_color_4a</item>
+        <item name="buttonStyle">@style/My.Button</item>
+    </style>
+
+    <style name="WAH_Theme.Translucent">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="buttonStyle">@style/My.Button</item>
+    </style>
+
+    <style name="ThemeOverlay.WAH" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">@color/background_material_light</item>
+        <item name="android:textColor">@color/abc_primary_text_material_light</item>
+    </style>
+
+    <style name="WAH_Theme.edit_profile" parent="WAH_Theme">
+        <item name="android:colorBackground">@color/background_material_light</item>
+        <item name="android:textColor">@color/abc_primary_text_material_light</item>
+        <item name="android:textColorHint">@color/underline</item>
+        <item name="colorControlNormal">@color/underline</item>
+        <item name="colorControlActivated">@color/underline</item>
+        <item name="colorControlHighlight">@color/underline</item>
+    </style>
+
+    <style name="menu_labels_style" >
+        <!-- Customize your theme here. -->
+        <item name="android:background">@drawable/fab_label_background</item>
+        <item name="android:textColor">@color/app_light_grey</item>
+    </style>
+
+    <style name="journal_toolbar_style" >
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/app_light_grey</item>
+    </style>
+
+    <style name="TextAppearance.App.FloatLabel" parent="android:TextAppearance.Small">
+        <item name="android:textColor">@color/float_label_color</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="Theme.App.WhiteText" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:textColor">@color/white</item>
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="editTextColor">@color/white</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="colorControlNormal">#80999999</item>
+        <item name="colorControlActivated">#80999999</item>
+        <item name="colorControlHighlight">#80999999</item>
+    </style>
+
+    <style name="Theme.App.BeenThere" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/green_primaryr</item>
+        <item name="colorPrimaryDark">@color/green_primary_dark</item>
+    </style>
+    <style name="Theme.App.Duration" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/duration_yellow_primary</item>
+        <item name="colorPrimaryDark">@color/duration_yellow_primary_dark</item>
+    </style>
+    <style name="Theme.App.Orange" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/orange_primary</item>
+        <item name="colorPrimaryDark">@color/orange_primary_dark</item>
+        <item name="buttonStyle">@style/My.Button</item>
+    </style>
+    <style name="Theme.Transparent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="colorPrimary">@android:color/transparent</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="buttonStyle">@style/My.Button</item>
+    </style>
+
+    <style name="WAH_Theme.Bridge" parent="WAH_Theme">
+        <item name="colorPrimaryDark">#B7BABE</item>
+    </style>
+    <style name="ToolbarTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ToolbarSubTitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="TabTextAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="DiscoverTabTextAppearance" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textSize">10sp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="My.Button" parent="Widget.AppCompat.Button">
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+    <style name="OverflowMenu" parent="@android:style/Widget.PopupMenu">
+        <item name="overlapAnchor">true</item>
+        <item name="android:overlapAnchor" tools:ignore="NewApi">true</item>
+        <item name="android:dropDownVerticalOffset">-36dip</item>
+    </style>
+
+    <style name="PopupMenu" parent="@style/Widget.AppCompat.Light.PopupMenu">
+        <item name="overlapAnchor">true</item>
+        <item name="android:overlapAnchor" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="CenterDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="ShowcaseButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">80dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:background">@drawable/button_normal</item>
+    </style>
+
+    <style name="ShowcaseView.Light">
+        <item name="sv_titleTextAppearance">@style/TextAppearance.ShowcaseView.Title</item>
+        <item name="sv_detailTextAppearance">@style/TextAppearance.ShowcaseView.Detail.Light</item>
+        <item name="sv_backgroundColor">#3333B5E5</item>
+        <item name="sv_buttonText">@android:string/ok</item>
+    </style>
+
+    <style name="ShowcaseView">
+        <item name="sv_titleTextAppearance">@style/TextAppearance.ShowcaseView.Title</item>
+        <item name="sv_detailTextAppearance">@style/TextAppearance.ShowcaseView.Detail</item>
+        <item name="sv_backgroundColor">#3333B5E5</item>
+        <item name="sv_buttonText">@android:string/ok</item>
+    </style>
+
+    <style name="TextAppearance.ShowcaseView.Title" parent="android:style/TextAppearance.Large">
+        <item name="android:textSize">15dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="TextAppearance.ShowcaseView.Detail" parent="android:style/TextAppearance">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    <style name="TextAppearance.ShowcaseView.Detail.Light">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:shadowColor">#FF0000</item>
+        <item name="android:shadowRadius">0</item>
+    </style>
+
+    <style name="TextAppearance.ShowcaseView.Title.Light">
+        <item name="android:shadowRadius">0</item>
+    </style>
+
+    <style name="CompatDarkActionBarTheme" parent="android:Theme.Holo.Light" />
+
+    <style name="CustomShowcaseTheme" parent="ShowcaseView.Light">
+        <item name="sv_backgroundColor">#3300A621</item>
+        <item name="sv_showcaseColor">#00801A</item>
+        <item name="sv_buttonText">Hide</item>
+        <item name="sv_tintButtonColor">false</item>
+        <item name="sv_titleTextAppearance">@style/CustomTitle</item>
+    </style>
+
+    <style name="CustomShowcaseTheme2" parent="ShowcaseView.Light">
+        <item name="sv_backgroundColor">#dc24272b</item>
+        <item name="sv_showcaseColor">#00000000</item>
+        <item name="sv_buttonText">Close</item>
+        <item name="sv_titleTextAppearance">@style/CustomTitle2</item>
+    </style>
+
+    <style name="CustomShowcaseTheme3" parent="ShowcaseView">
+        <item name="sv_backgroundColor">#330066FF</item>
+        <item name="sv_showcaseColor">#00801A</item>
+        <item name="sv_buttonText">Close</item>
+        <item name="sv_titleTextAppearance">@style/CustomTitle</item>
+    </style>
+
+    <style name="SampleTheme" parent="Theme.AppCompat.Light">
+        <item name="showcaseViewStyle">@style/CustomShowcaseTheme</item>
+    </style>
+
+    <style name="SampleTheme2" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="showcaseViewStyle">@style/CustomShowcaseTheme2</item>
+    </style>
+
+    <style name="CustomTitle" parent="TextAppearance.ShowcaseView.Title">
+        <item name="android:textColor">#00801A</item>
+    </style>
+
+    <style name="CustomTitle2" parent="TextAppearance.ShowcaseView.Title">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <style name="ListItemBigtext">
+        <item name="android:textColor">#25467A</item>
+        <item name="android:textAppearance">?android:attr/textAppearanceLarge</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="ListItemSubtext">
+        <item name="android:textAppearance">?android:attr/textAppearanceSmall</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="Widget" />
+
+    <style name="Widget.ProgressBar.CircularProgressBar" parent="Widget">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:adjustViewBounds">true</item>
+        <item name="cpb_progressColor">@color/circular_progress_default_progress</item>
+        <item name="cpb_hasShadow">true</item>
+        <item name="cpb_strokeWidth">20</item>
+        <item name="cpb_titleColor">@color/circular_progress_default_title</item>
+        <item name="cpb_subtitleColor">@color/circular_progress_default_subtitle</item>
+    </style>
+
+    <style name="Widget.ProgressBar.Holo.CircularProgressBar" parent="Widget.ProgressBar.CircularProgressBar">
+        <item name="cpb_hasShadow">false</item>
+        <item name="cpb_strokeWidth">5</item>
+    </style>
+
+    <style name="PrimaryButton" parent="@style/Widget.AppCompat.Button.Borderless">
+        <item name="fontPath">fonts/roboto/Roboto-Medium.ttf</item>
+        <item name="android:textSize">@dimen/text_size_20</item>
+    </style>
+</resources>
+
